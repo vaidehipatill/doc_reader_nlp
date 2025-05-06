@@ -2,6 +2,10 @@
 
 The Document Insight Assistant is a web application that allows users to upload academic/business/informational PDFs and interact with them using natural language queries. Powered by OpenAI’s language models and vector-based retrieval, this tool is designed to help students and researchers extract relevant information from large documents efficiently.
 
+## Links
+
+GitHub: https://github.com/vaidehipatill/doc_reader_nlp
+YouTube: 
 
 ## Features
 
