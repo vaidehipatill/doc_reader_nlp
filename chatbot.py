@@ -1,19 +1,24 @@
 # Handles OpenAI GPT chat
 
+import os
 import openai
+from dotenv import load_dotenv
 
-# Set OpenAI API key
-OPENAI_API_KEY = "PLEASE_USE_YOUR_API_KEY"
+# Load environment variables from .env file
+load_dotenv()
 
-client = openai.OpenAI(api_key=OPENAI_API_KEY)
+# Set your OpenAI API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def chat_with_gpt(context, question):
-    response = client.chat.completions.create(
+    response = openai.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[
-            {"role": "system", "content": "You are a helpful assistant answering based on the document."},
-            {"role": "user", "content": f"Context: {context}\n\nQuestion: {question}\n\nAnswer:"}
-        ],
-        temperature=0.2,
+            {"role": "system", "content": context},
+            {"role": "user", "content": question}
+        ]
     )
-    return response.choices[0].message.content.strip()
+
+    # Extract the response content
+    answer = response.choices[0].message.content.strip()
+    return answer

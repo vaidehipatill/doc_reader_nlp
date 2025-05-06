@@ -6,7 +6,7 @@ from vector_store import build_index, query_index
 from chatbot import chat_with_gpt
 
 st.set_page_config(page_title="Document Insight Assistant", layout="wide")
-st.markdown("<h1 style='color: #2E4053;'>Document Reader</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='color: #2E4053;'>Document Insight Assistant</h1>", unsafe_allow_html=True)
 st.markdown("<p style='color: #566573;'>An academic tool to extract insights and answer questions from your documents.</p>", unsafe_allow_html=True)
 
 uploaded_files = st.sidebar.file_uploader("Upload your PDF documents", type=["pdf"], accept_multiple_files=True)
