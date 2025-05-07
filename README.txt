@@ -5,7 +5,7 @@ The Document Insight Assistant is a web application that allows users to upload 
 ## Links
 
 GitHub: https://github.com/vaidehipatill/doc_reader_nlp
-YouTube: 
+YouTube: https://www.youtube.com/watch?v=MWHp99dzJZc
 
 ## Features
 
